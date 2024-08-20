@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  width: 360px;
+  background-color: #1e1e1e;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#display {
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 2.5em;
+  text-align: right;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 -5px 0 rgba(255, 255, 255, 0.1);
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#display1,
+#display2 {
+  margin: 0;
+  padding: 0;
+}
+
+#components {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+button {
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button#clear {
+  background-color: #f5365c;
+  color: white;
+}
+
+button#minus,
+button.operation {
+  background-color: #ff9f43;
+  color: white;
+}
+
+button#eaqual {
+  background-color: #28c76f;
+  color: white;
+}
+
+#comma,
+#delete,
+#clear {
+  border-radius: 15px;
+}
+
+.line {
+  display: contents; /* Use the grid layout instead */
+}
+
+button:hover {
+  background-color: #474747;
+}
+
+button#clear:hover {
+  background-color: #ff3b57;
+}
+
+button#minus:hover,
+button.operation:hover {
+  background-color: #ffa94d;
+}
+
+button#eaqual:hover {
+  background-color: #33d17a;
+}
+
+#display1 {
+  font-size: 15px; /* Smaller text size for display1 */
+  color: #a9a9a9; /* Lighter color for distinction */
+  margin-bottom: 5px;
+}
+
+#display2 {
+  font-size: 30px; /* Larger text size for display2 */
+  color: white; /* Bright color for main display */
+}
